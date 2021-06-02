@@ -28,5 +28,12 @@ class TestMC(unittest.TestCase):
             self.assertTrue(abs(pi - math.pi) < 0.4, msg=f"Estimate with even {i} iterations is {pi} which is not accurate enough.\n")
         
     
+def wallis(n):
+    pi = 1
+    for i in range(1,n+1):
+        pi =  pi* (4*(i**2))/(4 *(i**2) -1)
+    return 2*pi 
+
+
 if __name__ == "__main__":
     unittest.main()
